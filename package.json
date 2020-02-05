@@ -7,9 +7,6 @@
     "discord.js": "^11.5.1",
     "request": "2.81.0"
   },
-  "engines": {
-    "node": "12.14.1"
-  },
   "devDependencies": {},
   "scripts": {
     "start": "node bot.js"
