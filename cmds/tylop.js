@@ -10,7 +10,6 @@ function getRandomInt(min, max) {
       return Number(value);
   return false;
 }
-
 module.exports.run = async (bot,message,args) => {
     message.channel.send(VoiceChannel.members.size);
     message.channel.send('Число:'+getRandomInt(1,args[0]));
@@ -20,5 +19,5 @@ module.exports.run = async (bot,message,args) => {
     
 };
 module.exports.help = {
-    name: "test"
+    name: "tylop"
 };
