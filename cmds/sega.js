@@ -11,9 +11,6 @@ function getRandomInt(min, max) {
 }
 module.exports.run = async (bot,message,args) => {
     message.channel.send('Число:'+getRandomInt(1,args[0]));
-    fs.writeFile('./profile.json',JSON.stringify(profile),(err)=>{
-        if(err) console.log(err);
-    })
     
 };
 module.exports.help = {
