@@ -10,8 +10,6 @@ function getRandomInt(min, max) {
       return Number(value);
   return false;
 }
-
-
 module.exports.run = async (bot,message,args) => {
     message.channel.send(GuildChannel.VoiceChannel.members.array().leigh());
     message.channel.send('Число:'+getRandomInt(1,args[0]));
