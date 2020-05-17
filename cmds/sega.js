@@ -1,6 +1,5 @@
 const Discord = module.require("discord.js");
 const fs = require("fs");
-let profile= require("../profile.json");
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
