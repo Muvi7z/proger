@@ -24,6 +24,7 @@ module.exports.run = async (bot,message,args) => {
       let count = 0;
       for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
       console.log(count);
+      console.log(voiceChannels.members.id[1]);
     }
 
 };
