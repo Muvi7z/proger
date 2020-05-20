@@ -18,7 +18,15 @@ fs.readdir('./cmds/',(err,files)=>{
       bot.commands.set(props.help.name,props);
   });
 })
-
+bot.setInterval(() => {
+  
+  const guild = bot.guilds.cache.get('622718588356132884');
+  const voiceChannel = guild.channels.get(622718588989734929);
+  voiceChannel.members.forEach(member => {
+      // Give users a coin
+      console.log("yes");
+  })
+}, 60000)
 bot.on('ready', () => {
   console.log(`Запущен бот ${bot.user.username}`);
   bot.generateInvite(["ADMINISTRATOR"]).then(link =>{
