@@ -21,7 +21,7 @@ fs.readdir('./cmds/',(err,files)=>{
 bot.setInterval(() => {
   
   const guild = bot.guilds.cache.get('622718588356132884');
-  const voiceChannel = guild.channels.get(622718588989734929);
+  const voiceChannel = guild.channels.get('622718588989734929');
   voiceChannel.members.forEach(member => {
       // Give users a coin
       console.log("yes");
