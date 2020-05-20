@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const client = new Discord.Client();
+
 bot.commands = new Discord.Collection();
 const fs = require('fs');
 let config = require('./botconfig.json');
@@ -25,14 +25,7 @@ bot.on('ready', () => {
       console.log(link);
   })
 });
-client.setInterval(() => {
-  const guild = client.guilds.cache.get(622718588356132884);
-  const voiceChannel = guild.channels.get(622718588989734929);
-  voiceChannel.members.forEach(member => {
-      // Give users a coin
-      console.log("yes");
-  })
-}, 60000)
+
 bot.on('message', async message => {
   let messageArray = message.content.split(" ");
   let command = messageArray[0].toLowerCase();
@@ -69,5 +62,5 @@ bot.on('message', async message => {
   let cmd = bot.commands.get(command.slice(prefix.length));
   if(cmd) cmd.run(bot,message,args)
 });
-client.login(process.env.BOT_TOKEN);
+
 bot.login(process.env.BOT_TOKEN);
