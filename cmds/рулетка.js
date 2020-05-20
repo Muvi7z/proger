@@ -20,10 +20,10 @@ module.exports.run = async (bot,message,args) => {
         {
             if(filterFloat(args[0])==false)
             {
-                message.channel.send('А ты точно меня не обманываешь?!\nВведи кол-во монет!')
+                message.reply(' А ты точно меня не обманываешь?!\nВведи кол-во монет!')
             }
             else{
-                message.channel.send('@'+message.author.username+' удача на твоей стороне, радуйся пока можешь, ты выиграл '+args[0]+' монет!');
+                message.reply(' удача на твоей стороне, радуйся пока можешь, ты выиграл '+args[0]+' монет!');
                 u.coins+=parseInt(args[0]);
             }
         }
@@ -31,16 +31,16 @@ module.exports.run = async (bot,message,args) => {
             
             if(filterFloat(args[0])==false)
             {
-                message.channel.send('А ты точно меня не обманываешь?!\nВведи кол-во монет!')
+                message.reply(' А ты точно меня не обманываешь?!\nВведи кол-во монет!')
             }
             else{
                 u.coins-=parseInt(args[0]);
                 if(u.coins==0)
                 {
-                    message.channel.send('@'+message.author.username+' ты поставил все деньги и проиграл, возвращайся на завод!!');
+                    message.reply(' ты поставил все деньги и проиграл, возвращайся на завод!!');
                 }
                 else{
-                    message.channel.send('@'+message.author.username+' ты поставил '+args[0]+' и проиграл, следующий раз повезёт, у тебя осталось '+ u.coins+' Монет!');
+                    message.reply(' ты поставил '+args[0]+' и проиграл, следующий раз повезёт, у тебя осталось '+ u.coins+' Монет!');
                 }
             }
             //ты поставил . 
@@ -48,7 +48,7 @@ module.exports.run = async (bot,message,args) => {
         }
     }
     else{
-        message.channel.send('@'+message.author.username+' ты лишился всех денег, возвращайся на завод!!');
+        message.reply(' ты лишился всех денег, возвращайся на завод!!');
     }
     fs.writeFile('./profile.json',JSON.stringify(profile),(err)=>{
         if(err) console.log(err);
