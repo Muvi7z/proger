@@ -19,7 +19,7 @@ module.exports.run = async (bot,message,args) => {
       const GuildMember = message.guild.members;
       const channel = message.guild.channels.get('622718588989734929'); //replace voiceChannelID with your voice Channel ID
       let toCheck = channel.members;
-      message.reply(toCheck.max);
+      message.reply(toCheck.max(1));
       message.channel.send('Я выбираю тебя: ' + toCheck.random());
     }
 
