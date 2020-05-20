@@ -28,8 +28,7 @@ bot.on('ready', () => {
 client.on('ready', () => {
   // Get the channel via ID
   let channel = client.channels.get('622718588989734929');
-  // Or via name (less persistent)
-  channel = client.channels.find('name',"GJNJR");
+
 
   channel.join()
   .then(connection => console.log('Connected'))
