@@ -25,9 +25,9 @@ bot.on('ready', () => {
       console.log(link);
   })
 });
-client.on('ready', () => {
+bot.on('ready', () => {
   // Get the channel via ID
-  let channel = client.channels.get('622718588989734929');
+  let channel = bot.channels.get('622718588989734929');
 
 
   channel.join()
