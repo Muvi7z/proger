@@ -20,11 +20,7 @@ module.exports.run = async (bot,message,args) => {
       const channel = message.guild.channels.get('622718588989734929'); //replace voiceChannelID with your voice Channel ID
       let toCheck = channel.members;
       message.channel.send('Я выбираю тебя: ' + toCheck.random());
-      const voiceChannels = message.guild.channels.filter(c => c.type === 'voice');
-      let count = 0;
-      for (const [id, voiceChannel] of voiceChannels) count += voiceChannel.members.size;
-      console.log(count);
-      console.log(voiceChannels.members.id[1]);
+      /////////////////////////////////////////////////////////////////////////////////
     }
 
 };
