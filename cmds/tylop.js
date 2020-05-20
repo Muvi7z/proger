@@ -11,7 +11,6 @@ const fs = require("fs");
 //   })
 // }, 60000)
 module.exports.run = async (bot,message,args) => {
-    message.channel.send(voiceChannel.members.size);
     message.channel.send('Число:'+sega.getRandomInt(1,args[0]));
 };
 //client.login(process.env.BOT_TOKEN);

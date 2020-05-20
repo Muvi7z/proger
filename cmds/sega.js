@@ -10,7 +10,6 @@ var filterFloat = function (value) {
   return false;
 }
 module.exports.run = async (bot,message,args) => {
-    const guildmem = new message.member.voiceChannel;
     message.channel.send('Число:'+getRandomInt(1,args[0]));
     message.guild.channels.get()
 };
